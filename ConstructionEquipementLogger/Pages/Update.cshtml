@@ -1,0 +1,29 @@
+﻿@page
+@model ConstructionEquipementLogger.Pages.UpdateModel
+@{
+}
+<h4>Update a Record</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input type="hidden" asp-for="ConstructionEquipement.Id" />
+            <div class="form-group">
+                <label asp-for="ConstructionEquipement.Date" class="control-label"></label>
+                <input type="date" asp-for="ConstructionEquipement.Date" class="form-control" />
+                <span asp-validation-for="ConstructionEquipement.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConstructionEquipement.Quantity" class="control-label"></label>
+                <input type="number" asp-for="ConstructionEquipement.Quantity" class="form-control" />
+                <span asp-validation-for="ConstructionEquipement.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>

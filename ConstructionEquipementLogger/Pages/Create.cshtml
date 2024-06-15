@@ -1,0 +1,29 @@
+﻿@page
+@model ConstructionEquipementLogger.Pages.CreateModel
+@{
+}
+
+<h4>Add a New Record</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="ConstructionEquipement.Date" class="control-label"></label>
+                <input type="date" asp-for="ConstructionEquipement.Date" class="form-control" />
+                <span asp-validation-for="ConstructionEquipement.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConstructionEquipement.Quantity" class="control-label"></label>
+                <input type="number" asp-for="ConstructionEquipement.Quantity" class="form-control" />
+                <span asp-validation-for="ConstructionEquipement.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
